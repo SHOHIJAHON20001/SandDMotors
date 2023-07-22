@@ -18,6 +18,9 @@ a {
   color: #14c871;
   text-decoration: none;
 }
+#titleid {
+  font-weight: bold;
+}
 
 a:hover {
   color: #206bfb;
@@ -72,7 +75,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: transparent;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -102,7 +105,7 @@ h6 {
 
 @media (max-width: 991px) {
   #header {
-    padding: 12px 0;
+    padding: 10px 0;
   }
 }
 
@@ -112,9 +115,6 @@ h6 {
 /**
 * Desktop Navigation 
 */
-.navbar {
-  padding: 0;
-}
 .nav-link {
   font-size: large;
 }

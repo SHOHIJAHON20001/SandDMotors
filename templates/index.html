@@ -4,8 +4,12 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-    <br><br><br>
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="{% static 'assets/img/monza.jpg' %}" class="d-block w-100" alt="...">
@@ -14,16 +18,15 @@
           <img src="{% static 'assets/img/BYDHAN.jpg' %}" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
   </section><!-- End Hero -->
   
   <main id="main">
@@ -35,20 +38,20 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-              <h4 class="title">Lorem Ipsum</h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <center><h4 class="title" id="titleid">Logistika</h4></center>
+              <p class="description">Xitoydan dunyo mamlakatlari va xususan O’zbekistonga temir yo’l orqali to’liq konteynerlarni, yig'ma konteynerlarni, dengiz orqali to'liq konteynerlarni va yig'ma konteynerlarni, quruqlikda yuk transport avtomobillari yordamida yuklarni yetkazib berish xizmati.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
-              <h4 class="title">Dolor Sitema</h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <center><h4 class="title" id="titleid">Bojxona</h4></center>
+              <p class="description">Mahsulot buyurtma qilingach uni O’zbekistonda qay shaklda bojxona nazoratidan o’tkazishni Hamkorlarga tushuntirish, eng tez va arzon yo’llar orqali yuklarni bojxona nazoratidan o’tkazishni hal qilish.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="icon-box">
-              <h4 class="title">Sed ut perspiciatis</h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <center><h4 class="title" id="titleid">Kargo</h4></center>
+              <p class="description">Xitoydan harid qilingan kichik hajmli mahsulotlarni tez yetib boradigan yo’llar (avto va avia) orqali barcha bojxona rasmiylashtirishlarini amalga oshirgan holda mijoz qo'ligacha yetkazib berish xizmati.</p>
             </div>
           </div>
         </div>
@@ -56,128 +59,103 @@
       </div>
     </section><!-- End Featured Services Section -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= services Section ======= -->
+    <section id="services" id="about" class="about">
       <div class="container">
-        <h1><center>Biz haqimizda</center></h1><br><br>
+        <h1><center>Xizmatlar</center></h1><br><br><br>
         <div class="row">
           <div class="col-lg-6">
-            <img src="{% static 'assets/img/jetour-dasheng2_large.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/savdo.jpeg' %}" class="img-fluid" style="box-sizing: content-box;">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3>Savdo</h3>
+            <p class="fst" style="font-size: 20px;">
+              Elektromobillar — bu kelajak transportidir. Mashina tejamkor, ekologik toza va juda qulay. Ularga talab bor, shuning uchun biz maxsus sayt ochdik. Saytda qiziquvchilar kerakli ma’lumotlar bilan tanishib, yoqqan avtomashinani tanlab, buyurtma berishi mumkin. Boshida biz avval foydalanilgan mashinalarni sotishga qaror qildik. Chunki bugungi kunda yangi avtomashinaning narxi bojxona to‘lovlari bilan birga hisoblanganda, mashina umumiy narxining 56 foizini tashkil qiladi, bu juda qimmat", — deb izoh berildi kompaniya tomonidan.
             </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+      <!-- 2nd service -->
+      <br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/yuridik.jpg' %}" class="img-fluid" style="box-sizing: content-box;">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <h3>Yuridik</h3>
+            <p class="fst" style="font-size: 20px;">
+              Tadbirkorlar Xitoy tadbirkorlari bilan savdosida tushib qolgan qiyin ahvolni, aldanishlarni, pul bilan bog’liq bo’lgan muammolarni huquqiy jihatdan, Xitoylik va chet ellik advokatlar yordamida ijobiy tomonga hal qilish. Qonuniy jihatdan eng to’g’ri bo’lgan bitimlarni tuzish, Hamkorlarimizni Xitoy davlatida huquqiy himoya qilish.
             </p>
           </div>
         </div>
-
       </div>
+
+      <!-- 2nd service end -->
+      
+
+
+      <!-- 3rd service  -->
+      <br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/konsultatsiya.jpg' %}" class="img-fluid" style="box-sizing: content-box;">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <h3>Konsultatsiya</h3>
+            <p class="fst" style="font-size: 20px;">
+              Xitoy firmalari, ishlab chiqaruvchilari bilan ishlashda yuz berishi mumkin bo’lgan havflarni oldindan aniqlash, ularga muqobil yechimlar berish. Xitoylik tadbirkorlar bilan savdo aloqalarini o’rnatishda, muzokaralar o’tkazishda, sadvolashishda, yuklarni tayyorlanishini nazorat qilishda, tayyor bo’lgan yuklarni yuklashni nazoratga olishda hamkorlarga yaqindan yordam berish. Hamkorlarimiz buyurtma qilmoqchi bo’layotkan Xitoy firmalarini oldindan tekshirib berish, mahsulotlar sifatini va sonini tekshirib berish xizmati; Hamkorlarimiz nomidan muzokaralarda qatnashish, o’zlari topkan mahsulotlarni ular uchun muzokalarda eng arzon narxlarda olinishiga erishish xizmatlari.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 3rd service end -->
+
+
+      <!-- 4 service -->
+      <br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/Logistika.jpg' %}" class="img-fluid" style="box-sizing: content-box;">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <h3>Kargo</h3>
+            <p class="fst" style="font-size: 20px;">
+              Ayni paytda O‘zbekistonda ham elektromobillar ommalashib bormoqda. Chetdan tobora ko'proq yangi brendlar keltirilmoqda, xizmat ko'rsatish markazlari va elektr yonilg'i quyish shoxobchalari paydo bo'lmoqda, bu esa ushbu avtomobillarga bo'lgan talabdan dalolat beradi. Elektr transport vositalari ekologiya yo'nalishidagi katta yutuqdir. Ushbu avtomobillar chiqindi gazlar va zararli chiqindilarni ishlab chiqarmaydi, bu ularni eng toza va yashil transport vositalariga aylantiradi. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 4 service end -->
+
     </section><!-- End About Section -->
 
     
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2><center>Xizmatlar</center> </h2>
-          <p><center>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</center></p>
-        </div><br></br>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4>Lorem Ipsu</h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4>hreSed ut perspiciati</h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4>Magni Dolore</h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4>Nemo Enim</h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4>Dele cardo</h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4>Divera don</h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <br><br>
-
+    
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title">
           <h2><center>Galareya</center></h2>
-          <p><center> Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</center></p>
         </div>
         <br><br>
-
+        {% for gallery in gallerys %}
         <div class="row portfolio-container">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">
+            <img src="{{ gallery.image.url }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <h4>{{ gallery.for_home }}</h4>
+              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="{% url 'gallery' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-
-          
-
         </div>
-
+        {% endfor %}
+        
       </div>
     </section><!-- End Portfolio Section -->
 
@@ -197,7 +175,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="{% static 'assets/img/davronaka.jpg' %}" alt="" style="height: 500px; width: 500px;">
+              <img src="{% static 'assets/img/davronaka.jpg' %}" alt="" style="height: 500px; width: 700px;">
               <h4>Buvajonov Davron</h4>
               <span>CEO</span>
               <div class="social">

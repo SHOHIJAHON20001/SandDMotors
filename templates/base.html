@@ -30,25 +30,23 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <h2>
+    <!-- <h2>
       <center><img src="{% static 'assets/img/settings.png' %}" alt="" style="height: 27px; width: 27px;">
-        <strong>Test rejimida ishlamoqda!</strong> 
+        <strong style="font-style: italic;">Test rejimida ishlamoqda!</strong> 
       </center>
-    </h2>
+    </h2> -->
     <div class="container d-flex align-items-center justify-content-between">
 
       <!-- <h1 class="logo"><a href="index.html">S&D Motors</a></h1> -->
       <a class="navbar-brand" href="{% url 'home' %}">
-        <h4 style="color:rgb(0, 0, 0);  font-family: 'Times New Roman', Times, serif; font-weight: bolder; font-size: 25px;">
-          <center>BARAKA MOTORS</center>
-          <p style="font-size:15px; font-style: normal;"><span style="font-style: italic;">BARAKALI AVTOMOBILLAR</span> </p>
+        <h4 style="color:rgb(0, 0, 0);  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 25px;">
+          <center>HLB MOTORS</center>
         </h4></a>
       <!-- Uncomment below if you prefer to use an image logo -->
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Asosiy</a></li>
-          <li><a class="nav-link scrollto" href="#about">Biz haqimizda</a></li>
           <li><a class="nav-link scrollto" href="#services">Xizmatlar</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Galareya</a></li>
           <li><a class="nav-link scrollto" href="#team">Bizning jamoa</a></li>
@@ -73,7 +71,9 @@
     <br><br>
     <div class="container footer-bottom clearfix">
       <div class="copyright" style="text-align: center;">
-        &copy; Copyright <strong><span><a href="{% url 'home' %}">S&D Motors</a></span></strong>. All Rights Reserved
+        <center>
+          &copy; Copyright <strong><span><a href="{% url 'home' %}">S&D Motors</a></span></strong>. All Rights Reserved
+        </center>
       </div>
     </div>
   </footer><!-- End Footer -->

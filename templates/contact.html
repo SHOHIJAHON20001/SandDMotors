@@ -1,25 +1,28 @@
+{% if name %}
+<center>
+  <h3>Rahmat {{ self.name }}</h3>
+  <p>Thanks will will be get in touch with you!</p>
+</center> 
+{% else %}
 
 <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
     <form action="{% url 'send_mail' %}" method="post" role="form" class="php-email-form">
       {% csrf_token %}
       <div class="row">
         <div class="form-group col-md-6">
-          <label for="name">Ismingiz</label>
-          <input type="text" name="name" class="form-control" id="name" required>
+          <input type="text" name="name" class="form-control" id="name" required placeholder="Ismingiz">
         </div>
         <div class="form-group col-md-6 mt-3 mt-md-0">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" id="email" required>
+          <input type="email" class="form-control" name="email" id="email" required placeholder="Email">
         </div>
       </div>
       <div class="form-group mt-3">
-        <label for="subject">Automobil nomi va markasi</label>
-        <input type="text" class="form-control" name="subject" id="subject" required>
+        <input type="text" class="form-control" name="subject" id="subject" required placeholder="Automobil nomi va markasi">
       </div>
       <div class="form-group mt-3">
-        <label for="message ">Xabar qldiring</label>
-        <textarea class="form-control" name="message" rows="10" required></textarea>
+        <textarea class="form-control" name="message" rows="10" required placeholder="Xabar qoldiring"></textarea>
       </div><br>
       <center><button type="submit">Send Message</button></center>
     </form>
   </div>
+{% endif %}

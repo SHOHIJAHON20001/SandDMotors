@@ -1,28 +1,39 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
 from config.settings import EMAIL_HOST_USER
 from django.core.mail import EmailMessage
+from .models import Galareya
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'index.html')
+    gallerys = Galareya.objects.all()
+    context  = {
+        'gallerys':gallerys
+    }
+    return render(request, 'index.html', context)
 
 def gallery(request):
-    return render(request, 'portfolio-details.html')
+    gallerys = Galareya.objects.all()
+    context  = {
+        'gallerys':gallerys
+    }
+    return render(request, 'portfolio-details.html', context)
+
+
 
 def send_mail(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         name = request.POST['name']
         email = request.POST['email']
         subject = request.POST['subject']
         message = request.POST['message']
 
-        gmail = EmailMessage(
-            f"Subject: {subject}",
-            f"{message}",
+        email = EmailMessage(
+            f"xabar jo'natuvchi: {email}",
+            f"Ismi: {name}\n\n Elektron pochta manzili: {email}/n/n Telefon: {subject}\n\n Xabar: {message}",
             email,
-            [EMAIL_HOST_USER]
+            [EMAIL_HOST_USER],
         )
-        gmail.send(fail_silently = True)
-    return render(request, "contact.html", {"name":name})
+        email.fail_silently = False
+        email.send()
+    return render(request, 'contact.html', {'name':name})

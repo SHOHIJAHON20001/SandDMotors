@@ -39,11 +39,15 @@
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Avtomobil xarakteristikasi</h3>
+              {% for gallery in gallerys %}
               <ul>
-                <li><strong>Model</strong>: Tesla</li>
-                <li><strong></strong>: Tesla</li>
-                <li><strong>Model</strong>: Tesla</li>
-                <li><strong>Model</strong>: Tesla</li>
+                <li><strong>Model</strong>: {{ gallery.model }}</li>
+                <li><strong>Gibrid</strong>: {{ gallery.gibrid }}</li>
+                <li><strong>Yuqori tezlik</strong>: {{ gallery.max_speed }} km/s</li>
+                <li><strong>Mator</strong>: {{ gallery.motor }} L</li>
+                <li><strong>Passajirlar soni</strong>: {{ gallery.passangers }} ta</li>
+                <li><strong>Batareya hajmi</strong>: {{ gallery.battery_capacity }} kwh</li>
+                <li><strong>maksimal sayohat oralig'i</strong>: {{ gallery.max_cruising_range }} km/s</li>
               </ul>
             </div>
           </div>
