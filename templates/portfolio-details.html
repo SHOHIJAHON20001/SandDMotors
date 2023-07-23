@@ -27,10 +27,11 @@
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
+                {% for gallery in gallerys %}
                 <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" alt="">
+                  <img src="{{ gallery.images.url }}" alt="">
                 </div>
+                {% endfor %}
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -49,6 +50,7 @@
                 <li><strong>Batareya hajmi</strong>: {{ gallery.battery_capacity }} kwh</li>
                 <li><strong>maksimal sayohat oralig'i</strong>: {{ gallery.max_cruising_range }} km/s</li>
               </ul>
+              {% endfor %}
             </div>
           </div>
 
