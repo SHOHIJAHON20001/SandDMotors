@@ -1,9 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from config.settings import EMAIL_HOST_USER
 from django.core.mail import EmailMessage
-from django.core.mail import send_mail
 from .models import Galareya
-from django.http import HttpResponse
 # Create your views here.
 
 
@@ -34,25 +32,26 @@ def our_team(request):
     return render(request, 'ourteam.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    gallerys = Galareya.objects.all()[:6]
+    context  = {
+        'gallerys':gallerys
+    }
+    return render(request, 'contact.html', context)
 
 
 def mail_send(request):
     if request.method == 'POST':
         name = request.POST['name']
-        sender_email = request.POST['email']
+        email_address = request.POST['email']
         phone = request.POST['phone']
-        msg = request.POST['msg']
+        subject = request.POST['subject']
 
         email = EmailMessage(
-            f"xabar jo'natuvchi: {sender_email}",
-            f"Ismi: {name}\n\n Elektron pochta manzili: {sender_email}/n/n Telefon: {phone}\n\n Xabar: {msg}",
-            sender_email,
+            f"Avtomobil modeli: {subject}",
+            f"Xabar Yuboruvchi: {name}\n\n Elektron pochta manzili: {email_address}\n\n Avtomobil modeli: {subject}\n\n Telefon raqam: {phone}",
+            email_address,
             [EMAIL_HOST_USER],
         )
-        email.fail_silently = False
-        email.send()
-        print(name, sender_email, phone, msg)
-        return HttpResponse('Muvaffaqqiyatli')
-    else:
-        return HttpResponse("Muvaffaqqiyatsiz!!")
+        email.send(fail_silently=False)
+        print(name, email_address, subject)
+        return render(request, 'contact.html', {'name': name})

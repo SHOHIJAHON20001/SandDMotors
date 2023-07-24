@@ -19,5 +19,6 @@ class Galareya(models.Model):
         verbose_name = 'Galareya'
         verbose_name_plural = 'Galareya'
     
-    def __str__(self):
-        return self.name
+    
+    def for_contact(self):
+        return f"{self.name} {self.model}"
