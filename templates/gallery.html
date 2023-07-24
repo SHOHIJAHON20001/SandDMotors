@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2><center>Galareya</center></h2>
+      </div>
+      <br><br>
+
+      
+      <div class="row portfolio-container">
+        {% for gallery in gallerys %}
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.for_home }}">
+          <div class="portfolio-info">
+              <h4>{{ gallery.name }}</h4>
+              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'gallery_details' gallery.id %}" class="details-link" title="Xarakteristikasini ko'rish"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </section><!-- End Portfolio Section -->
+
+{% endblock content %}

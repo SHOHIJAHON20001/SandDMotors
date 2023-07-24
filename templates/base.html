@@ -46,11 +46,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Asosiy</a></li>
-          <li><a class="nav-link scrollto" href="#services">Xizmatlar</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Galareya</a></li>
-          <li><a class="nav-link scrollto" href="#team">Bizning jamoa</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Aloqa</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Asosiy</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'services' %}">Xizmatlar</a></li>
+          <li><a class="nav-link scrollto " href="{% url 'gallery' %}">Galareya</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'our_team' %}">Bizning jamoa</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Aloqa</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar --> 
@@ -72,7 +72,7 @@
     <div class="container footer-bottom clearfix">
       <div class="copyright" style="text-align: center;">
         <center>
-          &copy; Copyright <strong><span><a href="{% url 'home' %}">S&D Motors</a></span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span><a href="{% url 'home' %}">HLB Motors</a></span></strong>. All Rights Reserved
         </center>
       </div>
     </div>
