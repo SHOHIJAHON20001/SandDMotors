@@ -39,7 +39,7 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -67,8 +67,8 @@ h6 {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}
-#w-100 {
+} */
+.w-100 {
   width: 100%;
 }
 /*--------------------------------------------------------------
@@ -78,7 +78,7 @@ h6 {
   background: white;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  /* padding: 15px 0; */
 }
 
 #header.header-scrolled {

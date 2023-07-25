@@ -29,12 +29,8 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <!-- <h2>
-      <center><img src="{% static 'assets/img/settings.png' %}" alt="" style="height: 27px; width: 27px;">
-        <strong style="font-style: italic;">Test rejimida ishlamoqda!</strong> 
-      </center>
-    </h2> -->
+  <header id="header" class="fixed-top" style="background-color: transparent;">
+
     <div class="container d-flex align-items-center justify-content-between">
 
       <!-- <h1 class="logo"><a href="index.html">S&D Motors</a></h1> -->
@@ -46,11 +42,15 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Asosiy</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'services' %}">Xizmatlar</a></li>
-          <li><a class="nav-link scrollto " href="{% url 'gallery' %}">Galareya</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'our_team' %}">Bizning jamoa</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Aloqa</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">BOSH SAHIFA</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'services' %}">SERVIS</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'gallery' %}">MODELLAR</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'our_team' %}">BIZ HAQIMIZDA</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">BOG'LANISH</a></li>
+          <a href="tel:+998 (78) 113 88 80" class="phone-a">
+						<i class="fas fa-phone-alt"></i>
+						<span>+998 (78) 113 88 80</span>
+					</a>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar --> 

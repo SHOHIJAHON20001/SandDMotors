@@ -13,7 +13,7 @@ def home(request):
     return render(request, 'index.html', context)
 
 def gallery(request):
-    gallerys = Galareya.objects.all()
+    gallerys = Galareya.objects.all()[:]
     context  = {
         'gallerys':gallerys,
     }
@@ -32,7 +32,7 @@ def our_team(request):
     return render(request, 'ourteam.html')
 
 def contact(request):
-    gallerys = Galareya.objects.all()[:6]
+    gallerys = Galareya.objects.all()
     context  = {
         'gallerys':gallerys
     }
@@ -48,6 +48,24 @@ def mail_send(request):
 
         email = EmailMessage(
             f"Avtomobil modeli: {subject}",
+            f"Xabar Yuboruvchi: {name}\n\n Elektron pochta manzili: {email_address}\n\n Avtomobil modeli: {subject}\n\n Telefon raqam: {phone}",
+            email_address,
+            [EMAIL_HOST_USER],
+        )
+        email.send(fail_silently=False)
+        print(name, email_address, subject)
+        return render(request, 'contact.html', {'name': name})
+
+
+def send_mail(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email_address = request.POST['email']
+        phone = request.POST['phone']
+        subject = request.POST['subject']
+
+        email = EmailMessage(
+            f"Servis: {subject}",
             f"Xabar Yuboruvchi: {name}\n\n Elektron pochta manzili: {email_address}\n\n Avtomobil modeli: {subject}\n\n Telefon raqam: {phone}",
             email_address,
             [EMAIL_HOST_USER],

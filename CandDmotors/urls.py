@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home, gallery, gallery_details, our_team, services, contact, mail_send
+from .views import home, gallery, gallery_details, our_team, services, contact, mail_send, send_mail
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
    path('services/', services, name='services'),
    path('contact/', contact, name='contact'),
    path('mail_send/', mail_send, name='mail_send'),
+   path('send_mail/', send_mail, name='send_mail'),
 ]
