@@ -17,8 +17,8 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.for_home }}">
           <div class="portfolio-info">
-              <h4>{{ gallery.name }}</h4>
-              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <h4>{{ gallery.model }}</h4>
+              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ gallery.model  }}"><i class="bx bx-plus"></i></a>
               <a href="{% url 'gallery_details' gallery.id %}" class="details-link" title="Xarakteristikasini ko'rish"><i class="bx bx-link"></i></a>
           </div>
         </div>

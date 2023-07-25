@@ -73,3 +73,22 @@ def send_mail(request):
         email.send(fail_silently=False)
         print(name, email_address, subject)
         return render(request, 'contact.html', {'name': name})
+    
+
+# test drive
+def send_mail(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email_address = request.POST['email']
+        phone = request.POST['phone']
+        subject = request.POST['subject']
+
+        email = EmailMessage(
+            f"Test drive: {subject}",
+            f"Xabar Yuboruvchi: {name}\n\n Elektron pochta manzili: {email_address}\n\n Avtomobil modeli: {subject}\n\n Telefon raqam: {phone}",
+            email_address,
+            [EMAIL_HOST_USER],
+        )
+        email.send(fail_silently=False)
+        print(name, email_address, subject)
+        return render(request, 'index.html', {'name': name})
