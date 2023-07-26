@@ -273,12 +273,10 @@ h6 {
 
 .navbar-mobile {
   position: fixed;
-  overflow: hidden;
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0;
-  background: rgba(73, 80, 94, 0.9);
+  bottom: 5px;
   transition: 0.3s;
   z-index: 999;
 }
