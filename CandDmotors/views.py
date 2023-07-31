@@ -81,7 +81,7 @@ def send_mail(request):
         name = request.POST['name']
         email_address = request.POST['email']
         phone = request.POST['phone']
-        subject = request.POST['subject']
+        subject = request.POST['subject']   
 
         email = EmailMessage(
             f"Test drive: {subject}",

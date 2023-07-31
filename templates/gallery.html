@@ -13,13 +13,13 @@
 
       
       <div class="row portfolio-container">
-        {% for gallery in gallerys %}
+        {% for car in cars %}
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.for_home }}">
+          <img src="{{ car.image.url }}" class="img-fluid">
           <div class="portfolio-info">
-              <h4>{{ gallery.model }}</h4>
-              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ gallery.model  }}"><i class="bx bx-plus"></i></a>
-              <a href="{% url 'gallery_details' gallery.id %}" class="details-link" title="Xarakteristikasini ko'rish"><i class="bx bx-link"></i></a>
+              <h4>{{ car.model }}</h4>
+              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ car.model  }}"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'gallery_details' car.id %}" class="details-link" title="Xarakteristikasini ko'rish"><i class="bx bx-link"></i></a>
           </div>
         </div>
         {% endfor %}
